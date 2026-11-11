@@ -34,8 +34,6 @@ public partial class CatalogView : UserControl
     private void SearchChanged(object? sender, TextChangedEventArgs e)
     {
         string searchText = SearchBox.Text?.ToLower() ?? "";
-
-        // Оставляем только те товары, в названии которых есть введенный текст
         var filtered = allCards.Where(c => c.Name.ToLower().Contains(searchText)).ToList();
 
         CardsList.ItemsSource = filtered;

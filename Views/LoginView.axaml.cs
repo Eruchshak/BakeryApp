@@ -34,7 +34,6 @@ public partial class LoginView : UserControl
 
     private void LoginClick(object? sender, RoutedEventArgs e)
     {
-        // Берем выбранного пользователя из списка (в единственном числе)
         User? user = UsersBox.SelectedItem as User;
 
         if (user == null)
@@ -43,7 +42,6 @@ public partial class LoginView : UserControl
             return;
         }
 
-        // Проверяем пароль
         if (PasswordBox.Text != user.Password)
         {
             MainWindow.Instance.ShowError(new Exception("Неверный пароль! Попробуйте снова."));

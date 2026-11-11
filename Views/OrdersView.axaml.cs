@@ -18,13 +18,11 @@ public partial class OrdersView : UserControl
             try
             {
                 using var db = Db.Create();
-                // Загружаем заказы и связанных с ними пользователей
                 var orders = await db.Orders.Include(o => o.User).ToListAsync();
                 OrdersList.ItemsSource = orders;
             }
             catch (Exception ex)
             {
-                // Если произошла ошибка, показываем её прямо на экране
                 ErrorText.Text = "Ошибка загрузки: " + ex.Message;
             }
         };

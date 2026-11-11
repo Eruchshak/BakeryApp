@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
-namespace BakeryApp.Views; // <--- ВОТ ЭТО ОЧЕНЬ ВАЖНО
+namespace BakeryApp.Views;
 
 public partial class ReportView : UserControl
 {
