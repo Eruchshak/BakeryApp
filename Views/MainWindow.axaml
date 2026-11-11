@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BakeryApp.Views.MainWindow"
+        Title="Кондитерская" Width="1000" Height="700"
+        Background="{StaticResource NormalBrush}">
+
+    <DockPanel>
+        <!-- Шапка -->
+        <Border DockPanel.Dock="Top" Padding="15" Background="{StaticResource SurfaceBrush}">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <TextBlock Text="Кондитерская «Сладкий рай»" FontSize="22" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" VerticalAlignment="Center"/>
+                <TextBlock x:Name="UserText" Grid.Column="2" Text="Гость" VerticalAlignment="Center" FontWeight="Bold"/>
+            </Grid>
+        </Border>
+
+        <!-- Меню навигации -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" Spacing="10">
+            <Button Content="Каталог" Click="CatalogClick"/>
+            <Button x:Name="OrdersButton" Content="Заказы" Click="OrdersClick" IsVisible="False"/>
+            <Button Content="Сменить пользователя" Click="LogoutClick"/>
+            <Button x:Name="UsersButton" Content="Пользователи" Click="UsersClick" IsVisible="False"/>
+            <Button x:Name="ReportButton" Content="Отчет" Click="ReportClick" IsVisible="False"/>
+        </StackPanel>
+
+        <!-- Строка сообщений -->
+        <TextBlock x:Name="MessageText" DockPanel.Dock="Top" Margin="15,5" Foreground="DarkRed"/>
+
+        <!-- Место для страниц -->
+        <ContentControl x:Name="PageHost" Margin="15"/>
+    </DockPanel>
+</Window>

@@ -1,0 +1,39 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BakeryApp.App"
+             RequestedThemeVariant="Light"> 
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="SurfaceBrush" Color="#EBC6C6" /> 
+        <SolidColorBrush x:Key="AccentBrush" Color="#DC6F7F" /> 
+        <SolidColorBrush x:Key="NormalBrush" Color="#FFFFFF" /> 
+        <SolidColorBrush x:Key="ErrorBrush" Color="#B22222" /> 
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+       
+        <Style Selector="Window">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Background" Value="{StaticResource NormalBrush}" />
+        </Style>
+        
+        <Style Selector="Button">
+            <Setter Property="Padding" Value="12,8" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+        
+        <Style Selector="Button.accent">
+            <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        
+        <Style Selector="TextBlock.heading">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0, 0, 0, 10" />
+        </Style>
+    </Application.Styles>
+</Application>

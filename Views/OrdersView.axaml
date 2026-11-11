@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BakeryApp.Views.OrdersView">
+    <StackPanel Spacing="10">
+        <TextBlock Text="Список всех заказов" Classes="heading"/>
+        <TextBlock x:Name="ErrorText" Foreground="Red" FontWeight="Bold" />
+        <Button Content="Открыть состав выбранного заказа" Classes="accent" Click="OpenOrderClick"/>
+        <ListBox x:Name="OrdersList" Height="400">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding OrderId, StringFormat='Заказ № {0}'}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding OrderDate, StringFormat='Дата: {0:dd.MM.yyyy}'}"/>
+                            <TextBlock Text="{Binding TotalAmount, StringFormat='Сумма: {0:N2} руб.'}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>

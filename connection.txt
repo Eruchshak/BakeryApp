@@ -1,0 +1,1 @@
+﻿Server=localhost;Database=Сonfectionery;Trusted_Connection=True;TrustServerCertificate=True;

@@ -1,0 +1,12 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BakeryApp.Views.ReportView">
+    <StackPanel Spacing="15" Margin="20">
+        <TextBlock Text="Отчет по продажам" Classes="heading"/>
+        <TextBlock Text="Общая сумма всех заказов:" FontWeight="Bold"/>
+        
+        <!-- ВОТ ЭТОТ ЭЛЕМЕНТ ДОЛЖЕН БЫТЬ -->
+        <TextBlock x:Name="TotalSalesText" FontSize="24" Foreground="{StaticResource AccentBrush}"/>
+        
+    </StackPanel>
+</UserControl>

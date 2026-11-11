@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BakeryApp.Views.OrderDetailsView">
+    <StackPanel Spacing="15">
+        <TextBlock x:Name="HeaderText" Classes="heading"/>
+        
+        <Border BorderBrush="LightGray" BorderThickness="1" Padding="15" CornerRadius="5">
+            <StackPanel Spacing="10">
+                <TextBlock x:Name="ClientText" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="DateText"/>
+                <TextBlock x:Name="TotalText" FontWeight="Bold" Foreground="{StaticResource AccentBrush}"/>
+            </StackPanel>
+        </Border>
+
+        <TextBlock Text="Товары в заказе:" FontWeight="Bold"/>
+        
+        <ListBox x:Name="ItemsList" Height="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*, Auto" Margin="0,5">
+                        <TextBlock Text="{Binding ProductId, StringFormat='Товар (ID): {0}'}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Quantity, StringFormat='Кол-во: {0}'}" FontWeight="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <Button Content="Назад к списку" Click="BackClick" HorizontalAlignment="Left"/>
+    </StackPanel>
+</UserControl>
