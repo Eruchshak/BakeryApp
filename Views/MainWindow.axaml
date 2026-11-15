@@ -18,6 +18,7 @@
             <Button Content="Сменить пользователя" Click="LogoutClick"/>
             <Button x:Name="UsersButton" Content="Пользователи" Click="UsersClick" IsVisible="False"/>
             <Button x:Name="ReportButton" Content="Отчет" Click="ReportClick" IsVisible="False"/>
+            <Button x:Name="CartButton" Content="Корзина" Click="CartClick" IsVisible="False"/>
         </StackPanel>
 
         <TextBlock x:Name="MessageText" DockPanel.Dock="Top" Margin="15,5" Foreground="DarkRed"/>

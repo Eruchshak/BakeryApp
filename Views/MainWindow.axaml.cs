@@ -27,6 +27,7 @@ public partial class MainWindow : Window
             OrdersButton.IsVisible = Services.Session.IsStaff;
             UsersButton.IsVisible = Services.Session.IsAdmin;
             ReportButton.IsVisible = Services.Session.IsAdmin;
+            CartButton.IsVisible = true;
         }
         else
         {
@@ -34,6 +35,7 @@ public partial class MainWindow : Window
             OrdersButton.IsVisible = false;
             UsersButton.IsVisible = false;
             ReportButton.IsVisible = false;
+            CartButton.IsVisible = false;
         }
     }
 
@@ -64,5 +66,9 @@ public partial class MainWindow : Window
     private void ReportClick(object? sender, RoutedEventArgs e)
     {
         OpenPage(new ReportView());
+    }
+    private void CartClick(object? sender, RoutedEventArgs e)
+    {
+        OpenPage(new CartView());
     }
 }

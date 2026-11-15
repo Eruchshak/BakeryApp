@@ -41,7 +41,7 @@ public partial class LoginView : UserControl
             MainWindow.Instance.ShowMessage("Выберите пользователя из списка!");
             return;
         }
-
+  
         if (PasswordBox.Text != user.Password)
         {
             MainWindow.Instance.ShowError(new Exception("Неверный пароль! Попробуйте снова."));
